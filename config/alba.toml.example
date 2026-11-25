@@ -1,0 +1,45 @@
+# Configurazione di Alba — ESEMPIO.
+# Copia questo file in config/alba.toml e compila i campi.
+# MAI committare il file vero: contiene l'URL ICS privato e il chat id.
+# (config/alba.toml è in .gitignore.)
+
+[briefing]
+timezone = "Europe/Rome"
+briefing_hour = 7
+briefing_minute = 17
+
+[weather]
+latitude = 37.27
+longitude = 13.62
+place_name = "Agrigento"
+
+[calendar]
+# Link segreto in formato iCalendar di Google Calendar:
+# Google Calendar -> Impostazioni -> link segreto iCalendar.
+ics_url = "REPLACE_ME"
+
+[github]
+# Repo da controllare ogni notte (commit da ieri 07:17).
+repos = ["giulianogramaglia69-boop/GG", "giulianogramaglia69-boop/Mia-Agent"]
+
+[telegram]
+# Chat id Telegram dove arriva il briefing (numero, anche negativo per gruppi).
+telegram_chat_id = "REPLACE_ME"
+
+[llm]
+# Modello OpenRouter (connettore managed). I modelli free ruotano:
+# se risponde "model not found", scegline un altro dal catalogo.
+model = "meta-llama/llama-3.3-70b-instruct:free"
+
+[gateway]
+gateway_base_url = "https://api.sprites.dev"
+sprite_name_prefix = "alba"
+
+[connections]
+# Nomi (o frammenti di nome) delle connessioni Sprites in GET /v1/gateway/list.
+github_connection = "github"
+openrouter_connection = "openrouter"
+telegram_connection = "telegram"
+
+[serve]
+http_port = 8080

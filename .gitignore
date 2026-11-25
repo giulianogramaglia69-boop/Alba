@@ -1,0 +1,15 @@
+# Config reale (contiene URL ICS privato e chat id Telegram): MAI nel repo.
+config/alba.toml
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+*.egg-info/
+dist/
+build/
+
+# Dati runtime
+data/
+*.log
